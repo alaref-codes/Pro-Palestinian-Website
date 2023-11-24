@@ -6,7 +6,7 @@
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: 'Almarai-Regular';
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -104,7 +104,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: Almarai-Regular;
   font-size: 1em;
 }
 button,
@@ -273,7 +273,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Almarai-Regular", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333;
@@ -283,7 +283,7 @@ input,
 button,
 select,
 textarea {
-  font-family: inherit;
+  font-family: "Almarai-Regular";
   font-size: inherit;
   line-height: inherit;
 }
@@ -358,7 +358,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: "Almarai-Regular";
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -688,7 +688,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: "Almarai-Regular", Monaco, Consolas, "Courier New", monospace;
 }
 code {
   padding: 2px 4px;
@@ -2365,16 +2365,16 @@ input[type="button"].btn-block {
           transition: height .35s ease;
 }
 @font-face {
-  font-family: 'Glyphicons Halflings';
+  font-family: 'Almarai-Regular';
 
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../fonts/almarai/Almarai-Regular.ttf');
+  /* src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg'); */
 }
 .glyphicon {
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: 'Glyphicons Halflings';
+  font-family: 'Almarai-Regular';
   font-style: normal;
   font-weight: normal;
   line-height: 1;
@@ -5527,7 +5527,7 @@ button.close {
   height: 20px;
   margin-top: -10px;
   margin-left: -10px;
-  font-family: serif;
+  font-family: "Almarai-Regular";
 }
 .carousel-control .icon-prev:before {
   content: '\2039';
