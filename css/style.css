@@ -369,6 +369,34 @@ header.de_header_2.smaller .info {
 	float: none !important;
 }
 
+
+.card {
+	margin-bottom: 1rem;
+}
+  
+.card-img-top {
+	max-width: 100%;
+	height: 200px;
+}
+
+.card-title {
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+}
+
+.card {
+	border: 1px solid #ccc;
+	border-radius: 0.5rem;
+}
+
+.card:hover {
+	box-shadow: 0 0.25rem 0.25rem rgba(217, 217, 217, 0.1);
+}
+
+.card-img-top {
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+  
 /* subheader */
 
 #subheader {
