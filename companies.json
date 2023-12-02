@@ -1,0 +1,16 @@
+{
+    "companies": [
+        {
+            "name": "Acme Corporation",
+            "logoUrl": "https://example.com/acme-logo.png"
+        },
+        {
+            "name": "Beta Industries",
+            "logoUrl": "https://example.com/beta-logo.png"
+        },
+        {
+            "name": "Gamma Enterprises",
+            "logoUrl": "https://example.com/gamma-logo.png"
+        }
+    ]
+}
