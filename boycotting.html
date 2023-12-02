@@ -98,13 +98,20 @@
             </div>
         </section>
         <!-- subheader close -->
-
-        <div class="container">
-            <div class="row">
-              <script src="script.js"></script>
-            </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="images/companies/addidas.png" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
-          
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="images/companies/nestle.png" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+        <!-- <div id="companies"></div> -->
+ 
 
     <!-- footer begin -->
         <footer>
@@ -161,5 +168,29 @@
     <script src="js/designesia.js"></script>
 
 </body>
+<script>
+const companiesElement = document.getElementById('companies');
 
+fetch('companies.json')
+    .then(response => response.json())
+    .then(data => {
+        const companies = data.companies;
+        companies.forEach(company => {
+            const companyElement = document.createElement('div');
+            companyElement.className = 'company';
+
+            const logoElement = document.createElement('img');
+            logoElement.src = company.logoUrl;
+
+            const nameElement = document.createElement('h3');
+            nameElement.textContent = company.name;
+
+            companyElement.appendChild(logoElement);
+            companyElement.appendChild(nameElement);
+
+            companiesElement.appendChild(companyElement);
+        });
+    });
+
+</script>
 </html>
