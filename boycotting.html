@@ -8,7 +8,8 @@
     <meta name="description" content="Eventbiz is event and conference website template">
     <meta name="keywords" content="camp, conference, conference theme, event, event schedule, event website, event wordpress theme, exhibition, expo">
     <meta name="author" content="">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>
 	<![endif]-->
@@ -97,26 +98,7 @@
             </div>
         </section>
         <!-- subheader close -->
-        <div class="card-group">
-            <div class="card">
-              <img class="card-img-top" src="images/companies/addidas.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="images/companies/nestle.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="images/companies/addidas.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-              </div>
-            </div>
-          </div>
+        <div id="companies" class="card-group mx-auto p-5" ></div>
         <!-- <div id="companies"></div> -->
  
     <!-- footer begin -->
@@ -183,16 +165,24 @@ fetch('companies.json')
         const companies = data.companies;
         companies.forEach(company => {
             const companyElement = document.createElement('div');
-            companyElement.className = 'company';
+            companyElement.className = 'card';
 
             const logoElement = document.createElement('img');
+            logoElement.className = "card-img-top";
             logoElement.src = company.logoUrl;
+            logoElement.alt = 'boycotting companies'
 
-            const nameElement = document.createElement('h3');
+            const nameDiv = document.createElement('div');
+            nameDiv.className = 'card-body';
+
+            const nameElement = document.createElement('h5');
             nameElement.textContent = company.name;
+            nameElement.className = 'card-title';
+
+            nameDiv.appendChild(nameElement);
 
             companyElement.appendChild(logoElement);
-            companyElement.appendChild(nameElement);
+            companyElement.appendChild(nameDiv);
 
             companiesElement.appendChild(companyElement);
         });
@@ -200,3 +190,10 @@ fetch('companies.json')
 
 </script>
 </html>
+
+<!-- <div class="card">
+    <img class="card-img-top" src="images/companies/addidas.png" alt="Card image cap">
+    <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    </div>
+</div> -->
